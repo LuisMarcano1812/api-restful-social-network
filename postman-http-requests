@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "cb306adb-1b59-4f67-aaa5-44db952f2333",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"someone\",\r\n    \"email\": \"someone@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hey@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/api/users/6181708cc9782f252d653c1b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"6181708cc9782f252d653c1b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"hey its my updated description\",\r\n    \"userId\": \"6181708cc9782f252d653c1b\",\r\n    \"password\": \"qwerty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/users/6181708cc9782f252d653c1b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"6181708cc9782f252d653c1b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FOLLOW USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61815b26bece8c8863ac2a29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/users/618163f8bece8c8863ac2a2d/unfollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"618163f8bece8c8863ac2a2d",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNFOLLOW USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61815b26bece8c8863ac2a29\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/users/618163f8bece8c8863ac2a2d/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"618163f8bece8c8863ac2a2d",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"618154fabece8c8863ac2a22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/users/618154fabece8c8863ac2a22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"618154fabece8c8863ac2a22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"618163f8bece8c8863ac2a2d\",\r\n    \"desc\": \"hey its my first post from john\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET POST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8800/api/posts/61817548985ab0ff98dc4040",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts",
+						"61817548985ab0ff98dc4040"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE POST",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61815b26bece8c8863ac2a29\",\r\n    \"desc\": \"hey i updated my post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/posts/61816b85bece8c8863ac2a75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts",
+						"61816b85bece8c8863ac2a75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH POST",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61815b26bece8c8863ac2a29\",\r\n    \"desc\": \"hey i had updated my post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/posts/61816b85bece8c8863ac2a75",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts",
+						"61816b85bece8c8863ac2a75"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIKE/DISLIKE POST",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61815b26bece8c8863ac2a29\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/posts/61817548985ab0ff98dc4040/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts",
+						"61817548985ab0ff98dc4040",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE POST",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"618163f8bece8c8863ac2a2d\",\r\n    \"desc\": \"hey i updated my post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/posts/61816df5bece8c8863ac2a77",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"posts",
+						"61816df5bece8c8863ac2a77"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH USER",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"hey its my new updated description\",\r\n    \"userId\": \"6181708cc9782f252d653c1b\",\r\n    \"password\": \"qwerty\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8800/api/users/6181708cc9782f252d653c1b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8800",
+					"path": [
+						"api",
+						"users",
+						"6181708cc9782f252d653c1b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
